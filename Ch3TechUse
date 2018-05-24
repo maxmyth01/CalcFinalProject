@@ -10,7 +10,7 @@ blue = Color(0x0000FF,1)
 spacer = 20
 
 def drawAxis():
-    axisLine = RectangleAsset(700,3,LineStyle(1,blue),blue)
+    axisLine = RectangleAsset(950,3,LineStyle(1,blue),blue)
     dashLine = RectangleAsset(10,2,LineStyle(1,blue),blue)
     Sprite(axisLine, (50,300))
     Sprite(dashLine, (150,0))
