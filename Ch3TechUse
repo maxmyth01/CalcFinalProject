@@ -7,7 +7,7 @@ from ggame import *
 black = Color(0x000000,1)
 white = Color(0xFFFFFF,1)
 blue = Color(0x0000FF,1)
-spacer = 
+spacer = 20
 
 def drawAxis():
     axisLine = RectangleAsset(10,200,LineStyle(1,blue),blue)
