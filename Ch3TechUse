@@ -1,1 +1,38 @@
+#Max Low
+#5/24/18
+#Ch3TechUse -- Tracks a particles movement and provided the velocity and acceleration at the given t
+
+from ggame import *
+
+black = Color(0x000000,1)
+white = Color(0xFFFFFF,1)
+blue = Color(0x0000FF,1)
+spacer = 
+
+def drawAxis():
+    axisLine = RectangleAsset(10,200,LineStyle(1,blue),blue)
+    dashLine = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,blue),blue)
+    Sprite(axisLine, (150,0))
+    
+def drawBall():
+    clearBall()
+    
+def clearBall():
+    
+    
+def velocity():
+    
+
+def acceleration():
+    
+
+if __name__ == '__main__':
+    data = {}
+    data['t'] = []
+    
+    drawAxis
+    
+    App.listenKeyEvent('keydown','rightarrow', drawBall)
+    App.listenKeyEvent('keydown','leftArrow', drawBall)
+    App().run()
 
