@@ -10,15 +10,20 @@ blue = Color(0x0000FF,1)
 spacer = 20
 
 def drawAxis():
-    axisLine = RectangleAsset(10,200,LineStyle(1,blue),blue)
-    dashLine = RectangleAsset(CELL_SIZE,CELL_SIZE,LineStyle(1,blue),blue)
-    Sprite(axisLine, (150,0))
+    axisLine = RectangleAsset(1500,10,LineStyle(1,blue),blue)
+    dashLine = RectangleAsset(10,2,LineStyle(1,blue),blue)
+    Sprite(axisLine, (0,300))
+    Sprite(dashLine, (150,0))
+    
     
 def drawBall():
     clearBall()
     t+=1
     
 def clearBall():
+    print("not done")
+    
+def position():
     print("not done")
     
 def velocity():
