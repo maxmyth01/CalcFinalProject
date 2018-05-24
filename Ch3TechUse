@@ -10,11 +10,14 @@ blue = Color(0x0000FF,1)
 spacer = 20
 
 def drawAxis():
-    axisLine = RectangleAsset(950,3,LineStyle(1,blue),blue)
-    dashLine = RectangleAsset(10,2,LineStyle(1,blue),blue)
+    axisLine = RectangleAsset(900,3,LineStyle(1,blue),blue)
+    dashLine = RectangleAsset(2,10,LineStyle(1,blue),blue)
     Sprite(axisLine, (50,300))
-    Sprite(dashLine, (150,0))
-    
+    i=0
+    for i<=10:
+        Sprite(dashLine, (150,0))
+        i+=1
+     
     
 def drawBall():
     clearBall()
