@@ -16,6 +16,7 @@ def drawAxis():
     
 def drawBall():
     clearBall()
+    t+=1
     
 def clearBall():
     print("not done")
@@ -30,9 +31,8 @@ if __name__ == '__main__':
     data = {}
     data['t'] = []
     
-    drawAxis
+    drawAxis()
     
-    App.listenKeyEvent('keydown','rightarrow', drawBall)
-    App.listenKeyEvent('keydown','leftArrow', drawBall)
+    App.listenKeyEvent('keydown','right arrow', drawBall)
     App().run()
 
