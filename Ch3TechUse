@@ -14,9 +14,12 @@ def drawAxis():
     dashLine = RectangleAsset(2,10,LineStyle(1,blue),blue)
     Sprite(axisLine, (50,300))
     i=0
-    while i=0:
-        Sprite(dashLine, (150,0))
+    q=50
+    while i==10:
+        Sprite(dashLine, (q,300))
         i+=1
+        q+=50
+        
      
     
 def drawBall():
