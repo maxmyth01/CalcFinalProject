@@ -18,13 +18,13 @@ def drawBall():
     clearBall()
     
 def clearBall():
-    
+    print("not done")
     
 def velocity():
-    
+    print("not done")
 
 def acceleration():
-    
+    print("not done")
 
 if __name__ == '__main__':
     data = {}
