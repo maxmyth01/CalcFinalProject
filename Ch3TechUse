@@ -3,6 +3,7 @@
 #Ch3TechUse -- Tracks a particles movement and provided the velocity and acceleration at the given t
 
 from ggame import *
+from math import *
 
 black = Color(0x000000,1)
 white = Color(0xFFFFFF,1)
@@ -35,7 +36,7 @@ def clearBall():
     print("do i need?")
     
 def position():
-    print("At t =",data['t'],"  X = ", (((data['t']-2)^2)*(data['t']-4)))
+    print("At t =",data['t'],"  X = ", ((abs((data['t'])-2))^2))
     
 def velocity():
     print("At t =",data['t'],"  Velocity = ", (3*((data['t'])^2))+(-16*(data['t']))+20)
