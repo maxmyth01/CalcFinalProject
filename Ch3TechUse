@@ -27,8 +27,7 @@ def drawAxis():
         
      
     
-def drawBall():
-    clearBall()
+def drawBall(event):
     t+=1
     print("t= ",data['t'])
     position()
@@ -36,11 +35,6 @@ def drawBall():
     acceleration()
     Particle = CircleAsset(50,blackOutline,blue) # radius, linestyle,color
     Sprite(Particle,(data['position'],300))
-    
-    
-    
-def clearBall():
-    print("do i need?")
     
 def position():
     data['position'] = ((((data['t'])-2))**2)*(data['t']-4)
