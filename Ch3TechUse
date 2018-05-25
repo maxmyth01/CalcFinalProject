@@ -13,6 +13,7 @@ spacer = 20
 def drawAxis():
     axisLine = RectangleAsset(900,3,LineStyle(1,black),black)
     dashLine = RectangleAsset(2,10,LineStyle(1,black),black)
+    bigLine = RectangleAsset(4,20,LineStyle(1,black),black)
     
     Sprite(axisLine, (50,300))
     i=0
@@ -21,6 +22,8 @@ def drawAxis():
         Sprite(dashLine,(q,300))
         i+=1
         q+=50
+        if i == 9:
+            Sprite(bigLine,(q,300))
         
      
     
@@ -31,7 +34,8 @@ def drawBall():
     position()
     velocity()
     acceleration()
-    blueCircle = CircleAsset(50,blackOutline,blue) # radius, linestyle,color
+    Particle = CircleAsset(50,blackOutline,blue) # radius, linestyle,color
+    Sprite(Particle,(data['position'],300))
     
     
     
@@ -39,6 +43,7 @@ def clearBall():
     print("do i need?")
     
 def position():
+    data['position'] = ((((data['t'])-2))**2)*(data['t']-4)
     print("At t =",data['t'],"  X = ", ((((data['t'])-2))**2)*(data['t']-4))
     
 def velocity():
@@ -50,6 +55,7 @@ def acceleration():
 if __name__ == '__main__':
     data = {}
     data['t'] = 0
+    data['position'] = -16
     print("t= ",data['t'])
     position()
     velocity()
