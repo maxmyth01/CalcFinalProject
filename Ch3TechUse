@@ -32,6 +32,7 @@ def drawBall():
     acceleration()
     
 def clearBall():
+    print("do i need?")
     
 def position():
     print("At t =",data['t'],"  X = ", (((data['t']-2)^2)*(data['t']-4)))
