@@ -41,7 +41,7 @@ def velocity():
     print("At t =",data['t'],"  Velocity = ", (3*((data['t'])^2))+(-16*(data['t']))+20)
 
 def acceleration():
-    print("At t =",data['t'],"  Acceleration = ", (6*(data['t'])+(-16))
+    print("At t =",data['t'],"  Acceleration = ", (6*(data['t'])+(-16)))
 
 if __name__ == '__main__':
     data = {}
