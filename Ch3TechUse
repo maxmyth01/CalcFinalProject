@@ -34,7 +34,7 @@ def drawBall(event):
     position()
     velocity()
     acceleration()
-    Particle = CircleAsset(50,blackOutline,blue) # radius, linestyle,color
+    Particle = CircleAsset(50,LineStyle(5,black),blue) # radius, linestyle,color
     Sprite(Particle,(data['position'],300))
     
     
