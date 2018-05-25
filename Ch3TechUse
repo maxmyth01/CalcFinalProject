@@ -33,8 +33,8 @@ def drawBall(event):
     position()
     velocity()
     acceleration()
-    Particle = CircleAsset(4,LineStyle(2,black),blue)
-    Sprite(Particle,(500 + data['position'],300))
+    Particle = CircleAsset(6,LineStyle(2,black),blue)
+    Sprite(Particle,((500 + (5*data['position']))-5,300))
     
 def position():
     data['position'] = ((((data['t'])-2))**2)*(data['t']-4)
@@ -50,14 +50,15 @@ if __name__ == '__main__':
     data = {}
     data['t'] = 0
     data['position'] = -16
+    print("Graphs the particle from t=0 to t=7, numerical values are given beyond that. Hit the right arrow to advance the particle.")
     print("t= ",data['t'])
     position()
     velocity()
     acceleration()
     
     drawAxis()
-    Particle = CircleAsset(4,LineStyle(2,black),blue)
-    Sprite(Particle,(500 + data['position'],300))
+    Particle = CircleAsset(6,LineStyle(2,black),blue)
+    Sprite(Particle,((500 + (5*data['position']))-5,300))
     
     App.listenKeyEvent('keydown','right arrow', drawBall)
     App().run()
