@@ -11,8 +11,8 @@ blue = Color(0x0000FF,1)
 spacer = 20
 
 def drawAxis():
-    axisLine = RectangleAsset(900,3,LineStyle(1,blue),blue)
-    dashLine = RectangleAsset(2,10,LineStyle(1,blue),blue)
+    axisLine = RectangleAsset(900,3,LineStyle(1,black),black)
+    dashLine = RectangleAsset(2,10,LineStyle(1,black),black)
     
     Sprite(axisLine, (50,300))
     i=0
@@ -31,6 +31,9 @@ def drawBall():
     position()
     velocity()
     acceleration()
+    blueCircle = CircleAsset(50,blackOutline,blue) # radius, linestyle,color
+    
+    
     
 def clearBall():
     print("do i need?")
