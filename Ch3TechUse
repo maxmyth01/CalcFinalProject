@@ -45,7 +45,7 @@ def acceleration():
 
 if __name__ == '__main__':
     data = {}
-    data['t'] = [0]
+    data['t'] = 0
     print("t= ",data['t'])
     position()
     velocity()
