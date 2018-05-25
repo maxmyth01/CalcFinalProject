@@ -27,7 +27,7 @@ def drawAxis():
         
      
     
-def drawBall():
+def drawBall(event):
     clearBall()
     data['t']+=1
     print("t= ",data['t'])
