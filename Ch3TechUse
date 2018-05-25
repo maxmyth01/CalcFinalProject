@@ -28,19 +28,13 @@ def drawAxis():
      
     
 def drawBall(event):
-    clearBall()
     data['t']+=1
     print("t= ",data['t'])
     position()
     velocity()
     acceleration()
-    Particle = CircleAsset(10,LineStyle(2,black),blue)
-    Sprite(Particle,(425-data['position'],300))
-    
-    
-    
-def clearBall():
-    print("do i need?")
+    Particle = CircleAsset(4,LineStyle(2,black),blue)
+    Sprite(Particle,(500 + data['position'],300))
     
 def position():
     data['position'] = ((((data['t'])-2))**2)*(data['t']-4)
@@ -62,8 +56,8 @@ if __name__ == '__main__':
     acceleration()
     
     drawAxis()
-    Particle = CircleAsset(10,LineStyle(2,black),blue)
-    Sprite(Particle,(425-data['position'],300))
+    Particle = CircleAsset(4,LineStyle(2,black),blue)
+    Sprite(Particle,(500 + data['position'],300))
     
     App.listenKeyEvent('keydown','right arrow', drawBall)
     App().run()
