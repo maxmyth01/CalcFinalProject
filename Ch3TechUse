@@ -77,7 +77,32 @@ def velocity():
     print("At t =",data['t'],"  Velocity = ", data['velocity'])
 
 def acceleration():
-    print("At t =",data['t'],"  Acceleration = ", (6*(data['t'])+(-16)))
+    data["a"]= data["a"]*data["A"]
+    if data["A"] == 0:
+        data["A"] = 0
+    else:
+        data["A"]= data["A"] - 1
+    
+    data["b"]= data["b"]*data["B"]
+    if data["B"] == 0:
+        data["B"] = 0
+    else:
+        data["B"]= data["B"] - 1
+        
+    data["c"]= data["c"]*data["C"]
+    if data["C"] == 0:
+        data["C"] = 0
+    else:
+        data["C"]= data["C"] - 1
+        
+    data["d"]= data["d"]*data["D"]
+    if data["D"] == 0:
+        data["D"] = 0
+    else:
+        data["D"]= data["D"] - 1
+    
+    data['acceleration'] = (data["a"]*(data['t']**data["A"]))+(data["b"]*(data['t']**data["B"]))+(data["c"]*(data['t']**data["C"]))+(data["d"]*(data['t']**data["D"]))
+    print("At t =",data['t'],"  Acceleration = ", data['acceleration'])
 
 if __name__ == '__main__':
     data = {}
