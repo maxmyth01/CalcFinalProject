@@ -37,16 +37,15 @@ def drawBall(event):
     Sprite(Particle,((500 + (5*data['position']))-5,300))
     
 def position():
-    a=1
-    A=3
-    b=-8
-    B=2
-    c=20
-    C=1
-    d=-16
-    D=0
-
-    data['position'] = (a*(data['t']**A))+(b*(data['t']**B))+(c*(data['t']**C))+(d*(data['t']**D))
+    data["a"]= 1
+    data["A"]= 3
+    data["b"]= -8
+    data["B"]= 2
+    data["c"]= 20
+    data["C"]= 1
+    data["d"]= -16
+    data["D"]= 0
+    data['position'] = (data["a"]*(data['t']**data["A"]))+(data["b"]*(data['t']**data["B"]))+(data["c"]*(data['t']**data["C"]))+(data["d"]*(data['t']**data["D"]))
     print("At t =",data['t'],"  X = ", data['position'])
     
 def velocity():
@@ -59,6 +58,14 @@ if __name__ == '__main__':
     data = {}
     data['t'] = 0
     data['position'] = 0
+    data["a"]= 0
+    data["A"]= 0
+    data["b"]= 0
+    data["B"]= 0
+    data["c"]= 0
+    data["C"]= 0
+    data["d"]= 0
+    data["D"]= 0
     print("Graphs the particle from t=0 to t=7, numerical values are given beyond that. Hit the right arrow to advance the particle.")
     print("t= ",data['t'])
     position()
