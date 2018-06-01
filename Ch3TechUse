@@ -110,6 +110,10 @@ if __name__ == '__main__':
     data['position'] = 0
     data['velocity'] = 0
     data['acceleration'] =0
+    
+    
+    
+    #Change the Below varibles to alter the base equation: aX^A+bx^B+cx^C+dx^D
     data["a"]= 0
     data["A"]= 0
     data["b"]= 0
@@ -118,6 +122,10 @@ if __name__ == '__main__':
     data["C"]= 0
     data["d"]= 0
     data["D"]= 0
+    
+    
+    
+    
     print("Graphs the particle from t=0 to t=7, numerical values are given beyond that. Hit the right arrow to advance the particle.")
     print("t= ",data['t'])
     position()
