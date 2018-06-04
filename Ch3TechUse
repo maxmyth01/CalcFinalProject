@@ -2,15 +2,18 @@
 #5/24/18
 #Ch3TechUse -- Tracks a particles movement and provided the velocity and acceleration at the given t
 
+#Imports ggame for graphics and math for the square root
 from ggame import *
 from math import *
 
+# defining constants
 black = Color(0x000000,1)
 white = Color(0xFFFFFF,1)
 blue = Color(0x0000FF,1)
 spacer = 20
 
 def drawAxis():
+    #A function that draws the axis and tick marks
     axisLine = RectangleAsset(900,3,LineStyle(1,black),black)
     dashLine = RectangleAsset(2,10,LineStyle(1,black),black)
     bigLine = RectangleAsset(4,20,LineStyle(1,black),black)
