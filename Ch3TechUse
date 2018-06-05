@@ -4,7 +4,7 @@
 
 #Imports ggame for graphics and math for the square root
 from ggame import *
-from math import *
+from math import sqrt
 
 # defining constants
 black = Color(0x000000,1)
@@ -42,6 +42,7 @@ def drawBall(event):
     
 def position():
     #Tracks the position and is used for the user to define the equation
+    #Change the Below varibles to alter the base equation: aX^A+bx^B+cx^C+dx^D
     data["a"]= 1
     data["A"]= 3
     data["b"]= -8
@@ -120,7 +121,7 @@ if __name__ == '__main__':
     
     
     
-    #Change the Below varibles to alter the base equation: aX^A+bx^B+cx^C+dx^D
+    #Initalizes the varibles in the dictionary
     data["a"]= 0
     data["A"]= 0
     data["b"]= 0
