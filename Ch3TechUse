@@ -13,7 +13,7 @@ blue = Color(0x0000FF,1)
 spacer = 20
 
 def drawAxis():
-    #A function that draws the axis and tick marks
+    #A function that draws the axis and tick marks at every 10 units
     axisLine = RectangleAsset(900,3,LineStyle(1,black),black)
     dashLine = RectangleAsset(2,10,LineStyle(1,black),black)
     bigLine = RectangleAsset(4,20,LineStyle(1,black),black)
@@ -31,6 +31,7 @@ def drawAxis():
      
     
 def drawBall(event):
+    #A function that draws a ball at each change of t
     data['t']+=1
     print("t= ",data['t'])
     position()
@@ -40,6 +41,7 @@ def drawBall(event):
     Sprite(Particle,((500 + (5*data['position']))-5,300))
     
 def position():
+    #Tracks the position and is used for the user to define the equation
     data["a"]= 1
     data["A"]= 3
     data["b"]= -8
@@ -52,6 +54,7 @@ def position():
     print("At t =",data['t'],"  X = ", data['position'])
     
 def velocity():
+    #prefoms the derivite based on the function given in position
     data["a"]= data["a"]*data["A"]
     if data["A"] == 0:
         data["A"] = 0
@@ -80,6 +83,7 @@ def velocity():
     print("At t =",data['t'],"  Velocity = ", data['velocity'])
 
 def acceleration():
+    #prefoms the derivite based on the function given in velocity
     data["a"]= data["a"]*data["A"]
     if data["A"] == 0:
         data["A"] = 0
